@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="pet" class="com.marshal.springframework.di.listsetmap.Pet">
+        <property name="name" value="哮天犬"/>
+        <property name="color" value="黑色"/>
+        <property name="age" value="1000000"/>
+    </bean>
+
+    <bean id="immortal" class="com.marshal.springframework.di.listsetmap.Immortal">
+        <property name="name" value="二郎神"/>
+        <property name="sex" value="男"/>
+        <property name="pet" ref="pet"/>
+        <property name="clothes">
+            <list>
+                <value>银盔</value>
+                <value>战甲</value>
+                <value>战靴</value>
+                <value>披风</value>
+                <ref bean="pet"/>
+            </list>
+        </property>
+        <property name="weapon">
+            <set>
+                <value>三叉抢</value>
+                <value>盾牌</value>
+                <ref bean="pet"/>
+            </set>
+        </property>
+        <property name="tasks">
+            <map>
+                <entry key="a" value="捉拿孙悟空"/>
+                <entry key="b" value="朋友家喝酒"/>
+            </map>
+        </property>
+        <property name="residence">
+            <props>
+                <prop key="a">洞府</prop>
+                <prop key="b">神庙</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>

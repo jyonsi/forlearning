@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marshal.mybatis.dao.MybatisStudentTblMapper">
+
+  <resultMap id="BaseResultMap" type="com.marshal.mybatis.dao.entity.MybatisStudentTbl">
+    <id column="student_id" jdbcType="BIGINT" property="studentId" />
+    <result column="student_name" jdbcType="VARCHAR" property="studentName" />
+    <result column="student_sex" jdbcType="TINYINT" property="studentSex" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="height" jdbcType="DOUBLE" property="height" />
+    <result column="weight" jdbcType="DOUBLE" property="weight" />
+    <result column="class_id" jdbcType="BIGINT" property="classId" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from mybatis_student_tbl
+    where student_id = #{studentId,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.marshal.mybatis.dao.entity.MybatisStudentTbl">
+    insert into mybatis_student_tbl (student_id, student_name, student_sex, 
+      birthday, height, weight, 
+      class_id)
+    values (#{studentId,jdbcType=BIGINT}, #{studentName,jdbcType=VARCHAR}, #{studentSex,jdbcType=TINYINT}, 
+      #{birthday,jdbcType=VARCHAR}, #{height,jdbcType=DOUBLE}, #{weight,jdbcType=DOUBLE}, 
+      #{classId,jdbcType=BIGINT})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.marshal.mybatis.dao.entity.MybatisStudentTbl">
+    update mybatis_student_tbl
+    set student_name = #{studentName,jdbcType=VARCHAR},
+      student_sex = #{studentSex,jdbcType=TINYINT},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      height = #{height,jdbcType=DOUBLE},
+      weight = #{weight,jdbcType=DOUBLE},
+      class_id = #{classId,jdbcType=BIGINT}
+    where student_id = #{studentId,jdbcType=BIGINT}
+  </update>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select student_id, student_name, student_sex, birthday, height, weight, class_id
+    from mybatis_student_tbl
+    where student_id = #{studentId,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select student_id, student_name, student_sex, birthday, height, weight, class_id
+    from mybatis_student_tbl
+  </select>
+
+</mapper>

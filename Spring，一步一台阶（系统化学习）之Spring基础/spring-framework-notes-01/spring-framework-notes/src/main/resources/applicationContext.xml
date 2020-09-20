@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 单例和多例模式
+    <import resource="com/marshal/springframework/ioc/scope/lazy.xml"/>-->
+
+    <!-- 初始化和销毁
+    <import resource="com/marshal/springframework/ioc/initdestory/initdestory.xml"/>-->
+
+    <!-- 懒加载和非懒加载
+    <import resource="com/marshal/springframework/ioc/lazy/lazy.xml"/>-->
+
+    <!-- 类属性值注入
+    <import resource="com/marshal/springframework/di/property/property.xml"/>-->
+
+    <!-- list、set、map和properties注入
+    <import resource="com/marshal/springframework/di/listsetmap/listsetmap.xml"/>-->
+
+    <!-- 面向切面 -->
+    <import resource="com/marshal/springframework/aop/aop.xml"/>
+
+</beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           https://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:component-scan base-package="com.marshal.springframework.di.listsetmap"/>
+
+    <util:list id="clothes">
+        <value>银盔</value>
+        <value>战甲</value>
+        <value>战靴</value>
+        <value>披风</value>
+        <ref bean="pet"/>
+    </util:list>
+
+    <util:set id="weapons">
+        <value>三叉抢</value>
+        <value>盾牌</value>
+        <ref bean="pet"/>
+    </util:set>
+
+    <util:map id="tasks">
+        <entry key="a" value="捉拿孙悟空"/>
+        <entry key="b" value="朋友家喝酒"/>
+    </util:map>
+
+    <util:properties id="residences">
+        <prop key="a">洞府</prop>
+        <prop key="b">神庙</prop>
+    </util:properties>
+
+</beans>

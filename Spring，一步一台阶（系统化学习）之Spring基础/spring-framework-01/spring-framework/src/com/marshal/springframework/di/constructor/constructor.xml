@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="taoistPriest" class="com.marshal.springframework.di.constructor.TaoistPriest">
+        <constructor-arg name="name" type="java.lang.String" value="风清扬"/>
+        <constructor-arg name="sex" type="java.lang.String" value="男"/>
+        <constructor-arg name="age" type="java.lang.Integer" value="33"/>
+        <constructor-arg name="height" type="java.lang.Float" value="176"/>
+        <constructor-arg name="weight" type="java.lang.Float" value="135"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        lazy-init属性：
+        true —— 懒加载
+        false —— 非懒加载
+    -->
+    <bean id="taoistPriest"
+          class="com.marshal.springframework.ioc.lazy.TaoistPriest"
+          lazy-init="false"/>
+
+</beans>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c73c9bed-8935-47b0-83cd-f1afdbec818a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\Develop\Maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YcDI9WBeoYpImvrIUvYsuDwzZA" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/marshal/springframework/aop" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Lessons\spring-framework-notes\src\main\java\com\marshal\springframework\ioc\scope" />
+      <recent name="D:\Lessons\spring-framework-notes\src\main\java\com\marshal\springframework\ioc" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.marshal.springframework.ioc.scope" />
+      <recent name="com.marshal.springframework.ioc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.marshal.springframework.aop" />
+      <recent name="com.marshal.springframework.di.property" />
+      <recent name="com.marshal.springframework.ioc.initdestory" />
+      <recent name="com.marshal.springframework.ioc.scope" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Lessons\spring-framework-notes\src\main\java\com\marshal\springframework\aop" />
+      <recent name="D:\Lessons\spring-framework-notes\src\main\java\com\marshal\springframework\di\listsetmap" />
+      <recent name="D:\Lessons\spring-framework-notes\src\main\java\com\marshal\springframework\ioc\lazy" />
+      <recent name="D:\Lessons\spring-framework-notes\src\main\java\com\marshal\springframework\ioc\initdestory" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.NotesTest.testAop">
+    <configuration name="NotesTest.testAop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-framework-notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marshal.springframework.notes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marshal.springframework.notes" />
+      <option name="MAIN_CLASS_NAME" value="com.marshal.springframework.notes.NotesTest" />
+      <option name="METHOD_NAME" value="testAop" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotesTest.testInitDestory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-framework-notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marshal.springframework.notes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marshal.springframework.notes" />
+      <option name="MAIN_CLASS_NAME" value="com.marshal.springframework.notes.NotesTest" />
+      <option name="METHOD_NAME" value="testInitDestory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotesTest.testLazy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-framework-notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marshal.springframework.notes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marshal.springframework.notes" />
+      <option name="MAIN_CLASS_NAME" value="com.marshal.springframework.notes.NotesTest" />
+      <option name="METHOD_NAME" value="testLazy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotesTest.testListSetMapDi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-framework-notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marshal.springframework.notes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marshal.springframework.notes" />
+      <option name="MAIN_CLASS_NAME" value="com.marshal.springframework.notes.NotesTest" />
+      <option name="METHOD_NAME" value="testListSetMapDi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotesTest.testPropertyDi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-framework-notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marshal.springframework.notes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.marshal.springframework.notes" />
+      <option name="MAIN_CLASS_NAME" value="com.marshal.springframework.notes.NotesTest" />
+      <option name="METHOD_NAME" value="testPropertyDi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.NotesTest.testAop" />
+        <item itemvalue="JUnit.NotesTest.testListSetMapDi" />
+        <item itemvalue="JUnit.NotesTest.testPropertyDi" />
+        <item itemvalue="JUnit.NotesTest.testLazy" />
+        <item itemvalue="JUnit.NotesTest.testInitDestory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c73c9bed-8935-47b0-83cd-f1afdbec818a" name="Default Changelist" comment="" />
+      <created>1583232906583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583232906583</updated>
+      <workItem from="1583232910717" duration="3883000" />
+      <workItem from="1583284139336" duration="9131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

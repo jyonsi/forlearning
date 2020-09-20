@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 辅助业务类编配 -->
+    <bean id="customer" class="com.marshal.springframework.aop.Customer"/>
+
+    <!-- 目标业务类编配 -->
+    <bean id="taoistPriest" class="com.marshal.springframework.aop.TaoistPriest"/>
+
+    <!-- 辅助业务类编配 -->
+    <bean id="servant" class="com.marshal.springframework.aop.Servant"/>
+
+    <!-- 辅助业务类编配 -->
+    <bean id="oridinaryPeople" class="com.marshal.springframework.aop.OridinaryPeople"/>
+
+    <!-- 后置通知业务类 -->
+    <bean id="bodyResult" class="com.marshal.springframework.aop.BodyResult"/>
+
+    <!-- 异常通知业务类 -->
+    <bean id="aopException" class="com.marshal.springframework.aop.AopException"/>
+
+    <!-- 环绕通知业务类 -->
+    <bean id="forecast" class="com.marshal.springframework.aop.Forecast"/>
+
+    <!-- 配置aop -->
+    <aop:config>
+
+        <!-- 配置切入点 -->
+        <aop:pointcut id="daoshi" expression="execution(* com.marshal.springframework.aop.TaoistPriest.*(..))"/>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="forecast">
+            <!-- 环绕通知 -->
+            <aop:around method="tuiCeJiXiong" pointcut-ref="daoshi"/>
+        </aop:aspect>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="customer">
+            <!-- 前置通知 -->
+            <aop:before method="inventation" pointcut-ref="daoshi"/>
+        </aop:aspect>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="servant">
+            <!-- 后置通知 -->
+            <aop:after method="clean" pointcut-ref="daoshi"/>
+        </aop:aspect>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="oridinaryPeople">
+            <!-- 后置通知 -->
+            <aop:after method="eulogize" pointcut-ref="daoshi"/>
+        </aop:aspect>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="bodyResult">
+            <!-- 带参数的后置通知 -->
+            <aop:after-returning method="bodyResult" pointcut-ref="daoshi" returning="bodyValue"/>
+        </aop:aspect>
+
+        <!-- 配置切面 -->
+        <aop:aspect ref="aopException">
+            <!-- 异常通知 -->
+            <aop:after-throwing method="fail" pointcut-ref="daoshi" throwing="throwable"/>
+        </aop:aspect>
+
+    </aop:config>
+
+</beans>

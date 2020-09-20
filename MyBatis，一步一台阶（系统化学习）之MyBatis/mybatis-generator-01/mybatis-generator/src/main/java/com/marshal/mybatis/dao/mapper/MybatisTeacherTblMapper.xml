@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marshal.mybatis.dao.MybatisTeacherTblMapper">
+  <resultMap id="BaseResultMap" type="com.marshal.mybatis.dao.entity.MybatisTeacherTbl">
+    <id column="teacher_id" jdbcType="BIGINT" property="teacherId" />
+    <result column="teacher_name" jdbcType="VARCHAR" property="teacherName" />
+    <result column="teacher_sex" jdbcType="TINYINT" property="teacherSex" />
+  </resultMap>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from mybatis_teacher_tbl
+    where teacher_id = #{teacherId,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="com.marshal.mybatis.dao.entity.MybatisTeacherTbl">
+    insert into mybatis_teacher_tbl (teacher_id, teacher_name, teacher_sex
+      )
+    values (#{teacherId,jdbcType=BIGINT}, #{teacherName,jdbcType=VARCHAR}, #{teacherSex,jdbcType=TINYINT}
+      )
+  </insert>
+  
+  <update id="updateByPrimaryKey" parameterType="com.marshal.mybatis.dao.entity.MybatisTeacherTbl">
+    update mybatis_teacher_tbl
+    set teacher_name = #{teacherName,jdbcType=VARCHAR},
+      teacher_sex = #{teacherSex,jdbcType=TINYINT}
+    where teacher_id = #{teacherId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select teacher_id, teacher_name, teacher_sex
+    from mybatis_teacher_tbl
+    where teacher_id = #{teacherId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select teacher_id, teacher_name, teacher_sex
+    from mybatis_teacher_tbl
+  </select>
+  <resultMap id="BaseResultMap" type="com.marshal.mybatis.dao.entity.MybatisTeacherTbl">
+    <id column="teacher_id" jdbcType="BIGINT" property="teacherId" />
+    <result column="teacher_name" jdbcType="VARCHAR" property="teacherName" />
+    <result column="sex" jdbcType="TINYINT" property="sex" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from mybatis_teacher_tbl
+    where teacher_id = #{teacherId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.marshal.mybatis.dao.entity.MybatisTeacherTbl">
+    insert into mybatis_teacher_tbl (teacher_id, teacher_name, sex
+      )
+    values (#{teacherId,jdbcType=BIGINT}, #{teacherName,jdbcType=VARCHAR}, #{sex,jdbcType=TINYINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.marshal.mybatis.dao.entity.MybatisTeacherTbl">
+    update mybatis_teacher_tbl
+    set teacher_name = #{teacherName,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=TINYINT}
+    where teacher_id = #{teacherId,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select teacher_id, teacher_name, sex
+    from mybatis_teacher_tbl
+    where teacher_id = #{teacherId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select teacher_id, teacher_name, sex
+    from mybatis_teacher_tbl
+  </select>
+</mapper>
