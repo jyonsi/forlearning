@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 开发环境日志文件路径 -->
+    <property name="LOG_FILE_PATH" value="d:/logs/"/>
+
+    <!-- 日志输出格式 -->
+    <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] [%L] %logger{30} - %msg%n"/>
+
+    <!-- 指定输出致控制台 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- 按PATTERN格式输出日志记录，编码为UTF-8 -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 设定每天生成一个当天的日志记录文件 -->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <!-- 按PATTERN格式输出日志记录，编码为UTF-8 -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+
+        <!-- 设定保存策略 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 设定日志文件名称格式 -->
+            <fileNamePattern>${LOG_FILE_PATH}/sprintbootdemo_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 设定最大天数,即日志文件的最大数量 -->
+            <maxHistory>90</maxHistory>
+        </rollingPolicy>
+
+        <!-- 保存日志的错误级别 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 设定全局的最低级别，向控制台和日志文件同时输出 -->
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+
+</configuration>

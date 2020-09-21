@@ -1,0 +1,9 @@
+{
+  "name": "赵云",
+  "sex": 1,
+  "age": 10000,
+  "height": 188.0,
+  "weight": 66.0,
+  "pet": null,
+  "weapon": null
+}

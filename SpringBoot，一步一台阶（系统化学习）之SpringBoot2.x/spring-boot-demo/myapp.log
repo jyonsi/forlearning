@@ -1,0 +1,72 @@
+2020-04-25 18:01:37 INFO  [main] [55] c.m.s.s.SpringBootDemoApplication - Starting SpringBootDemoApplication on DESKTOP-6IREFGV with PID 3864 (D:\Lessons\spring-boot-demo\target\classes started by 86185 in D:\Lessons\spring-boot-demo)
+2020-04-25 18:01:37 INFO  [main] [651] c.m.s.s.SpringBootDemoApplication - No active profile set, falling back to default profiles: default
+2020-04-25 18:01:38 INFO  [main] [92] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-04-25 18:01:38 INFO  [main] [173] o.a.c.core.StandardService - Starting service [Tomcat]
+2020-04-25 18:01:38 INFO  [main] [173] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-25 18:01:38 INFO  [main] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring embedded WebApplicationContext
+2020-04-25 18:01:38 INFO  [main] [284] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1278 ms
+2020-04-25 18:01:38 INFO  [main] [181] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-25 18:01:39 INFO  [main] [204] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/spring-boot-demo'
+2020-04-25 18:01:39 INFO  [main] [61] c.m.s.s.SpringBootDemoApplication - Started SpringBootDemoApplication in 2.49 seconds (JVM running for 3.983)
+2020-04-25 18:01:47 INFO  [http-nio-8081-exec-1] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-25 18:01:47 INFO  [http-nio-8081-exec-1] [525] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-25 18:01:47 INFO  [http-nio-8081-exec-1] [547] o.s.w.s.DispatcherServlet - Completed initialization in 5 ms
+2020-04-25 18:01:47 INFO  [http-nio-8081-exec-1] [124] c.m.s.s.c.FileUploadController - 多文件工具上传文件！！
+2020-04-25 18:02:21 INFO  [http-nio-8081-exec-3] [124] c.m.s.s.c.FileUploadController - 多文件工具上传文件！！
+2020-04-25 18:02:57 INFO  [SpringContextShutdownHook] [218] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-25 18:03:23 INFO  [main] [55] c.m.s.s.SpringBootDemoApplication - Starting SpringBootDemoApplication on DESKTOP-6IREFGV with PID 5752 (D:\Lessons\spring-boot-demo\target\classes started by 86185 in D:\Lessons\spring-boot-demo)
+2020-04-25 18:03:23 INFO  [main] [651] c.m.s.s.SpringBootDemoApplication - No active profile set, falling back to default profiles: default
+2020-04-25 18:03:24 INFO  [main] [92] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-04-25 18:03:24 INFO  [main] [173] o.a.c.core.StandardService - Starting service [Tomcat]
+2020-04-25 18:03:24 INFO  [main] [173] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-25 18:03:24 INFO  [main] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring embedded WebApplicationContext
+2020-04-25 18:03:24 INFO  [main] [284] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 915 ms
+2020-04-25 18:03:24 INFO  [main] [181] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-25 18:03:24 INFO  [main] [204] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/spring-boot-demo'
+2020-04-25 18:03:24 INFO  [main] [61] c.m.s.s.SpringBootDemoApplication - Started SpringBootDemoApplication in 2.056 seconds (JVM running for 3.742)
+2020-04-25 18:03:43 INFO  [http-nio-8081-exec-1] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-25 18:03:43 INFO  [http-nio-8081-exec-1] [525] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-25 18:03:43 INFO  [http-nio-8081-exec-1] [547] o.s.w.s.DispatcherServlet - Completed initialization in 13 ms
+2020-04-25 18:03:43 INFO  [http-nio-8081-exec-1] [124] c.m.s.s.c.FileUploadController - 多文件工具上传文件！！
+2020-04-25 19:09:56 INFO  [SpringContextShutdownHook] [218] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:10:25 INFO  [main] [55] c.m.s.s.SpringBootDemoApplication - Starting SpringBootDemoApplication on DESKTOP-6IREFGV with PID 16444 (D:\Lessons\spring-boot-demo\target\classes started by 86185 in D:\Lessons\spring-boot-demo)
+2020-04-25 19:10:25 INFO  [main] [651] c.m.s.s.SpringBootDemoApplication - No active profile set, falling back to default profiles: default
+2020-04-25 19:10:26 INFO  [main] [92] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-04-25 19:10:26 INFO  [main] [173] o.a.c.core.StandardService - Starting service [Tomcat]
+2020-04-25 19:10:26 INFO  [main] [173] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-25 19:10:26 INFO  [main] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring embedded WebApplicationContext
+2020-04-25 19:10:26 INFO  [main] [284] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1347 ms
+2020-04-25 19:10:26 INFO  [main] [181] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:10:27 INFO  [main] [204] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/spring-boot-demo'
+2020-04-25 19:10:27 INFO  [main] [61] c.m.s.s.SpringBootDemoApplication - Started SpringBootDemoApplication in 2.77 seconds (JVM running for 4.948)
+2020-04-25 19:11:17 INFO  [SpringContextShutdownHook] [218] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:11:41 INFO  [main] [55] c.m.s.s.SpringBootDemoApplication - Starting SpringBootDemoApplication on DESKTOP-6IREFGV with PID 16432 (D:\Lessons\spring-boot-demo\target\classes started by 86185 in D:\Lessons\spring-boot-demo)
+2020-04-25 19:11:41 INFO  [main] [651] c.m.s.s.SpringBootDemoApplication - No active profile set, falling back to default profiles: default
+2020-04-25 19:11:42 INFO  [main] [92] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-04-25 19:11:42 INFO  [main] [173] o.a.c.core.StandardService - Starting service [Tomcat]
+2020-04-25 19:11:42 INFO  [main] [173] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-25 19:11:42 INFO  [main] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring embedded WebApplicationContext
+2020-04-25 19:11:42 INFO  [main] [284] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1025 ms
+2020-04-25 19:11:43 INFO  [main] [181] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:11:43 INFO  [main] [204] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/spring-boot-demo'
+2020-04-25 19:11:43 INFO  [main] [61] c.m.s.s.SpringBootDemoApplication - Started SpringBootDemoApplication in 2.2 seconds (JVM running for 3.777)
+2020-04-25 19:13:39 INFO  [http-nio-8081-exec-1] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-25 19:13:39 INFO  [http-nio-8081-exec-1] [525] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-25 19:13:39 INFO  [http-nio-8081-exec-1] [547] o.s.w.s.DispatcherServlet - Completed initialization in 5 ms
+2020-04-25 19:13:45 INFO  [http-nio-8081-exec-2] [124] c.m.s.s.c.FileUploadController - 多文件工具上传文件！！
+2020-04-25 19:14:04 INFO  [SpringContextShutdownHook] [218] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:14:10 INFO  [main] [55] c.m.s.s.SpringBootDemoApplication - Starting SpringBootDemoApplication on DESKTOP-6IREFGV with PID 3088 (D:\Lessons\spring-boot-demo\target\classes started by 86185 in D:\Lessons\spring-boot-demo)
+2020-04-25 19:14:10 INFO  [main] [651] c.m.s.s.SpringBootDemoApplication - No active profile set, falling back to default profiles: default
+2020-04-25 19:14:11 INFO  [main] [92] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-04-25 19:14:11 INFO  [main] [173] o.a.c.core.StandardService - Starting service [Tomcat]
+2020-04-25 19:14:11 INFO  [main] [173] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-25 19:14:11 INFO  [main] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring embedded WebApplicationContext
+2020-04-25 19:14:11 INFO  [main] [284] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1023 ms
+2020-04-25 19:14:11 INFO  [main] [181] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-25 19:14:11 INFO  [main] [204] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/spring-boot-demo'
+2020-04-25 19:14:11 INFO  [main] [61] c.m.s.s.SpringBootDemoApplication - Started SpringBootDemoApplication in 2.15 seconds (JVM running for 3.576)
+2020-04-25 19:14:19 INFO  [http-nio-8081-exec-1] [173] o.a.c.c.C.[.[.[/spring-boot-demo] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-25 19:14:19 INFO  [http-nio-8081-exec-1] [525] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-04-25 19:14:19 INFO  [http-nio-8081-exec-1] [547] o.s.w.s.DispatcherServlet - Completed initialization in 4 ms
+2020-04-25 19:14:27 INFO  [http-nio-8081-exec-2] [124] c.m.s.s.c.FileUploadController - 多文件工具上传文件！！
+2020-04-25 19:14:58 INFO  [SpringContextShutdownHook] [218] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

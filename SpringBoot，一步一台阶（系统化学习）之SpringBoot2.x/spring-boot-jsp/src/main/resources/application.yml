@@ -1,0 +1,12 @@
+server:
+  servlet:
+    # 应用上下文
+    context-path: /spring-boot-jsp
+  # 端口号
+  port: 8081
+
+spring:
+  mvc:
+    view:
+      prefix: /page/jsp/
+      suffix: .jsp

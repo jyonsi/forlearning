@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.marshal.springmvc.service"/>
+
+    <!-- 读取database.properties文件 -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <!-- 指定properties文件所在路径 -->
+        <property name="location" value="classpath:database.properties"/>
+    </bean>
+
+    <!-- 配置数据源 -->
+    <bean id="basicDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+    <!-- 配置扫描数据xml文件包 -->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 数据源 -->
+        <property name="dataSource" ref="basicDataSource"/>
+        <!-- xml配置文件位置 -->
+        <property name="mapperLocations" value="classpath:com/marshal/springmvc/dao/mapper/*.xml"/>
+    </bean>
+
+    <!-- 扫描mapper接口类并使接口类与xml文件关联 -->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 指定接口类存放位置 -->
+        <property name="basePackage" value="com.marshal.springmvc.dao"/>
+    </bean>
+
+</beans>

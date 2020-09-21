@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                           http://www.springframework.org/schema/task
+                           http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <!-- 包扫描 -->
+    <context:component-scan base-package="com.marshal.springmvc.controller,com.marshal.springmvc.task"/>
+
+    <!-- 加载校验类 -->
+    <bean id="localValidatorFactoryBean"
+          class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+    </bean>
+
+    <!-- 配置新的注解驱动 -->
+    <mvc:annotation-driven validator="localValidatorFactoryBean"/>
+
+    <!-- 加载FreeMarker配置 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="ftl"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!-- 配置FreeMarker视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <!-- org.springframework.web.servlet.support.RequestContext类的实例对应request -->
+        <property name="requestContextAttribute" value="request"/>
+        <property name="order" value="0"/>
+    </bean>
+
+    <!-- 配置视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 配置前缀 -->
+        <property name="prefix" value="/page/"/>
+        <!-- 配置后缀 -->
+        <property name="suffix" value=".jsp"/>
+        <property name="order" value="1"/>
+    </bean>
+
+    <!-- 配置文件上传 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 配置默认编码 -->
+        <property name="defaultEncoding" value="utf-8"/>
+        <!-- 配置文件大小上限 -->
+        <property name="maxUploadSize" value="1048576000"/>
+    </bean>
+
+    <!-- 配置文件方式统一处理异常
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.ArithmeticException">exception/exceptionhandler</prop>
+                <prop key="java.lang.NullPointerException">exception/exceptionhandler</prop>
+                <prop key="java.lang.ArrayIndexOutOfBoundsException">exception/exceptionhandler</prop>
+            </props>
+        </property>
+        <property name="exceptionAttribute" value="exception"/>
+    </bean>-->
+
+    <!-- 配置自定义异常处理类 -->
+    <bean class="com.marshal.springmvc.exception.MyExceptionHandler"/>
+
+    <!-- 配置定时任务
+    <task:annotation-driven/>-->
+
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/interceptor/method1.action"/>
+            <bean class="com.marshal.springmvc.interceptor.SpringMvcInterceptor1"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/interceptor/method1.action"/>
+            <bean class="com.marshal.springmvc.interceptor.SpringMvcInterceptor2"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+</beans>

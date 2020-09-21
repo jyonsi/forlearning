@@ -1,0 +1,111 @@
+server:
+  servlet:
+    context-path: /spring-boot-demo
+  # 端口号
+  port: 8081
+
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+  resources:
+    static-locations: /static
+  freemarker:
+    request-context-attribute: ctx
+    content-type: text/html
+    charset: UTF-8
+    cache: false
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+  servlet:
+    multipart:
+      # 启动文件上传
+      enabled: true
+      # 单个文件上传最大默认1MB
+      max-file-size: 100MB
+      # 单个请求的最大默认100MB
+      max-request-size: 100MB
+
+  # 配置数据源相关信息
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1111
+
+    # druid的配置
+    druid:
+    # druid连接池的配置
+      initial-size: 3                                  # 初始化时的连接数量
+      max-active: 20                                   # 最大活跃的连接数量
+      min-idle: 1                                      # 最小闲置的连接数量
+      max-wait: 60000                                  # 获取连接等待超时的时间，60秒（1分钟）
+      time-between-eviction-runs-millis: 60000         # 配置间隔检测时间，60秒（1分钟）
+      min-evictable-idle-time-millis: 300000      # 配置连接在池中的最小生存时间，300秒（5分钟）
+      validation-query: select 1 from dual             # 查询验证
+      test-while-idle: true                            # 空闲时是否检测
+      test-on-borrow: false                            # 申请连接时是否检测
+      test-on-return: false                            # 归还连接时是否检测
+      # 是否缓存 preparedStatement，即PSCache;
+      # PSCache对于支持游标的数据库性能提升很大，如 Oracle，但对于MySql建议关闭
+      pool-prepared-statements: false
+      # 指定PSCache的大小
+      max-pool-prepared-statement-per-connection-size: -1
+      # 是否打开 mergeSql 功能，慢SQL记录
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+      # 配置监控统计拦截的过滤器，该项必须存在，否则监控界面sql无法统计，其中 “wall” 用于防火墙
+      filters: stat,wall,
+      # druid监控的配置
+      web-stat-filter:
+        enabled: true                             # 是否启用过滤器StatFilter
+        url-pattern: /*                           # 过滤路径
+        # 设置不统计的URL
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+        session-stat-enable: true
+        session-stat-max-count: 1000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: false                       # 是否允许清空监控数据
+        login-username: druid                     # 设置监控的登录名称
+        login-password: druid                     # 设置监控的登录密码
+        allow: 127.0.0.1                          # 允许的白名单IP
+        deny: 192.168.0.19                        # 拒绝的黑名单IP 其优先级 deny > allow
+      filter:
+        slf4j:
+          enabled: true
+  devtools:
+    add-properties: false
+
+# 自定义文件上传位置
+file:
+  upload:
+    path: D:/uploadfiles/
+
+# 日志配置
+#logging:
+#  file:
+    # 日志文件的目录
+#    path: d:/logs/
+    # 日志文件的名称
+#    name: springbootdemo.log
+  # 日志级别
+#  level:
+#    root: info
+  # 日志样式
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] [%L] %logger{30} - %msg%n"
+#    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] [%L] %logger{30} - %msg%n"
+logging:
+  level:
+    web: info
+
+# MyBatis的配置
+mybatis:
+  # 配置接口配置文件路径
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  # 配置实体类所在包
+  type-aliases-package: com.marshal.springboot.springbootdemo.dao.entity'
+
